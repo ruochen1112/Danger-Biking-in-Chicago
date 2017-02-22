@@ -1,0 +1,78 @@
+* { font-family: "Inconsolata", sans-serif; font-size: 15px; font-weight: bolder}
+body, html {
+    height: 100%;
+    width: 60%
+    font-family: "Inconsolata", sans-serif;
+    font-weight: bolder;
+    background-color: LightGray;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom:10%;
+    padding: 0;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("http://www.360chicago.com/assets/components/phpthumbof/cache/south-view-night.963ca16a00054992735666819b54f6b4.jpg");
+    min-height: 75%;
+}
+
+#map {
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    }
+
+ #map_a8f182eb03064aff80b59e935c89085b {
+    position:static;
+    width : 100.0%;
+    height: 90.0%;
+    left: 0.0%;
+    top: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+    }
+
+ul.nav {
+  list-style-type:georgian;
+  margin:auto;
+  padding: 1px;
+  overflow:scroll;
+  background-color: Black;
+}
+ul.nav li { float:left;}
+ul.nav li a {
+  display:inline-table;
+  color: white;
+  padding: 16px 26px;
+  text-decoration:underline;
+  font-size: 18px;
+}
+ul.nav li a.active {
+  color: Navy;
+  background-color: #FFF;
+  font-weight: bold;
+}
+ul.nav li:hover {
+  background-color: CornflowerBlue;
+  transition: 0.5s;
+}
+
+li{
+  font-family: "Inconsolata", sans-serif;
+  margin: 7px 2;
+  margin-bottom: 5px;
+  margin: 5px;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}

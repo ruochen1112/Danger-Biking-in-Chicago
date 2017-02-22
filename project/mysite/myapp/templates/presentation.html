@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="w3-container">
+<div class="w3-content" style="max-width:800px">
+  <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">Research Topic</span></h3>
+  <div class="w3-panel w3-leftbar w3-light-grey">
+    <p>Our topic is about crimes around each bike station in Chicago area. </p>
+    <p>We want to make a web app where you can find how many crimes around any bike station in the map, and you can check the types and counts of crimes! </p>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<div class="w3-content" style="max-width:800px">
+  <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">Data Sources and Data Clean</span></h3>
+  <div class="w3-panel w3-leftbar w3-light-grey">
+    <p>There are two main data sources:</p>
+    <p>First one is the divvy data, this gives us geometirc information of all bike stations in the city. For the divvy data, I selected the latest data from Ferb 1st to July 1st to count the stations. From it, I picked three columns "FROM STATION ID","FROM LONGITUDE","FROM LATITUDE", kept every new station while dropped the duplicate stations. The result shows that there are 524 stations been used recently. Then we transferred this station data into a geo data-frame.</p>
+    <p>The second one is crime data, we used all crime data staring from 2013 till now. For the crime data, we picked Primary Type, Longitude and Latitude column to make a list of tuple as location points and transferred them into a geo data-frame as we did with divvy data.</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<div class="w3-content" style="max-width:800px">
+  <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">How we merge data</span></h3>
+  <div class="w3-panel w3-leftbar w3-light-grey">
+    <p>We set divvy points radian (300 meters) and join with crime data points, save the intermediate join data as join_data.csv, and used this for the website map and plot.</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<div class="w3-content" style="max-width:800px">
+  <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">Mapping</span></h3>
+  <div class="w3-panel w3-leftbar w3-light-grey">
+    <p>After merging to get a complete data frame (“maps”) folium is imported for actual mapping. A “for” loop is used for each row in the “maps” data frame, and the html and Iframe functions in folium are used to create popup labels on markers, each of which indicates a bike station. The popup labels provide information on station name, station ID, and the number of crimes that have occurred in a 300 meter radius around that station in the past three years. </p>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<div class="w3-content" style="max-width:800px">
+  <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">Plot Crime Type around the station</span></h3>
+  <div class="w3-panel w3-leftbar w3-light-grey">
+    <p>In our website, under "Crime Data Analysis" tab, you can find the plot of crimes near any station you choose under the dropdown menu. The crime plot has information of types of crimes occurred near the station you chose, also the number of crimes.</p>
+    <p>Using this information, you can avoid areas that are more dangerous when you plan your trip.</p>
+  </div>
+</div>
+</div>
+
+<br>
+{% endblock %}

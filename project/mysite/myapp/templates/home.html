@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header class="bgimg w3-display-container w3-grayscale-min">
+  <div class="w3-display-bottomleft w3-center w3-padding-xlarge w3-hide-small">
+    <span class="w3-tag">Check out crime data before you ride a bike</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Bike<br>And<br>Crime</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-xlarge">
+    <span class="w3-text-white">Final Project, Nov 30, 2016</span>
+  </div>
+</header>
+<br>
+<br>
+<p>
+  <div class="w3-container">
+  <div class="w3-content" style="max-width:800px">
+    <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">What can you find here?</span></h3>
+    <span class="w3-tag w3-xlarge w3-padding w3-right" style="transform:rotate(+5deg)">
+      Danger!
+    </span>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p>500+ bike stations in Chicago</p>
+      <p>Crime data around any station in the city</p>
+      <p>Just click on the map to see crime count information around each bike station in city of Chicago for the last 3 years.</p>
+      <p>
+        Find more about chicago crime dataset:
+      <a href=https://data.cityofchicago.org/Public-Safety/Crimes-2016/kf95-mnd6>here</a>.
+      <br>
+      <p>
+        Find more about Divvy dataset:
+      <a href=https://data.cityofchicago.org/Transportation/Divvy-Trips-Dashboard/u94x-unre>here</a>.
+    </div>
+  </div>
+</div>
+{% endblock %}
